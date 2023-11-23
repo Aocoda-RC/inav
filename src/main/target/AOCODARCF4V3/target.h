@@ -142,7 +142,7 @@
 #define USE_PINIO
 #define USE_PINIOBOX
 #define PINIO1_PIN                  PC5  // VTX power switcher
-#define PINIO2_PIN                  PA14  //
+#define PINIO2_PIN                  PA14  //bluetooth
 
 //************ LEDSTRIP *****************
 #define USE_LED_STRIP
@@ -151,9 +151,9 @@
 // ******* FEATURES ********
 #define DEFAULT_RX_TYPE                 RX_TYPE_SERIAL
 #define SERIALRX_UART                   SERIAL_PORT_USART2
-#define SERIALRX_PROVIDER               SERIALRX_SBUS
+#define SERIALRX_PROVIDER               SERIALRX_CRSF
 
-#define DEFAULT_FEATURES                (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TX_PROF_SEL | FEATURE_BLACKBOX)
+#define DEFAULT_FEATURES                (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TX_PROF_SEL | FEATURE_BLACKBOX | FEATURE_LED_STRIP)
 
 #define TARGET_IO_PORTA                 0xffff
 #define TARGET_IO_PORTB                 0xffff
