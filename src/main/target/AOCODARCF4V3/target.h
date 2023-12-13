@@ -143,6 +143,8 @@
 #define USE_PINIOBOX
 #define PINIO1_PIN                  PC5  // VTX power switcher
 #define PINIO2_PIN                  PA14  //bluetooth
+#define PINIO1_FLAGS				PINIO_FLAGS_INVERTED
+#define PINIO2_FLAGS				PINIO_FLAGS_INVERTED
 
 //************ LEDSTRIP *****************
 #define USE_LED_STRIP
