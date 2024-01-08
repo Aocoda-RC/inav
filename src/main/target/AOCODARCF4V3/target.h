@@ -19,8 +19,13 @@
 
 #define USE_TARGET_CONFIG
 
-#define TARGET_BOARD_IDENTIFIER         "AOF4V3"
-#define USBD_PRODUCT_STRING             "AocodaRCF4V3"
+#ifdef AOCODARCF4V3_Flash
+#define TARGET_BOARD_IDENTIFIER "AOF4V3F"
+#define USBD_PRODUCT_STRING     "AocodaRCF4V3_Flash"
+#else
+#define TARGET_BOARD_IDENTIFIER "AOF4V3SD"
+#define USBD_PRODUCT_STRING     "AOCODARCF4V3_SDCard"
+#endif
 
 // ******** Board LEDs  **********************
 #define LED0                            PC13
@@ -61,6 +66,7 @@
 #define USE_BARO_BMP280
 #define USE_BARO_MS5611
 #define USE_BARO_DPS310
+#define USE_BARO_SPL06
 
 //*********** Magnetometer / Compass *************
 #define USE_MAG
@@ -136,18 +142,27 @@
 #define MAX7456_CS_PIN                  PA13
 
 //******* FLASH ********
+#if defined(AOCODARCF4V3_SDCard)
+#define USE_SDCARD
+#define USE_SDCARD_SPI
+#define SDCARD_SPI_BUS          BUS_SPI3
+#define SDCARD_CS_PIN           PC0
+#define SDCARD_DETECT_INVERTED
+#define SDCARD_DETECT_PIN       PC14
+#define ENABLE_BLACKBOX_LOGGING_ON_SDCARD_BY_DEFAULT
+#else
 #define USE_FLASHFS
 #define USE_FLASH_M25P16
 #define M25P16_SPI_BUS                  BUS_SPI3
 #define M25P16_CS_PIN                   PC0
-
 #define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
-
+#endif
 // *************** PINIO ***************************
 #define USE_PINIO
 #define USE_PINIOBOX
 #define PINIO1_PIN                  PC5  // VTX power switcher
 #define PINIO2_PIN                  PA14  //bluetooth
+#define PINIO3_PIN                  PC15 //Camera control
 #define PINIO1_FLAGS				PINIO_FLAGS_INVERTED
 #define PINIO2_FLAGS				PINIO_FLAGS_INVERTED
 
