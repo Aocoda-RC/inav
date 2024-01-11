@@ -1,2 +1,3 @@
-target_stm32f405xg(AOCODARCF4V3)
+target_stm32f405xg(AOCODARCF4V3_SDCard)
+target_stm32f405xg(AOCODARCF4V3_Flash)
 
