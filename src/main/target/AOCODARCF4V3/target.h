@@ -24,7 +24,7 @@
 #define USBD_PRODUCT_STRING     "AocodaRCF4V3"
 #else
 #define TARGET_BOARD_IDENTIFIER "AOF4V3SD"
-#define USBD_PRODUCT_STRING     "AOCODARCF4V3_SDCard"
+#define USBD_PRODUCT_STRING     "AOCODARCF4V3_SD"
 #endif
 
 // ******** Board LEDs  **********************
@@ -142,7 +142,7 @@
 #define MAX7456_CS_PIN                  PA13
 
 //******* FLASH ********
-#if defined(AOCODARCF4V3_SDCard)
+#if defined(AOCODARCF4V3_SD)
 #define USE_SDCARD
 #define USE_SDCARD_SPI
 #define SDCARD_SPI_BUS          BUS_SPI3
