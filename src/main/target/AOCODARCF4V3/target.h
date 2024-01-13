@@ -95,8 +95,8 @@
 #define UART4_RX_PIN                    PA1
 
 #define USE_UART5
-#define UART5_TX_PIN                    PC12
-#define UART5_RX_PIN                    PD2
+#define UART5_TX_PIN                    PD2
+#define UART5_RX_PIN                    PC12
 
 
 #define SERIAL_PORT_COUNT              6
