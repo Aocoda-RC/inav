@@ -134,6 +134,7 @@
 #define CURRENT_METER_ADC_CHANNEL       ADC_CHN_1
 
 #define VBAT_SCALE_DEFAULT              1100
+#define CURRENT_METER_SCALE             206
 
 // ******* OSD ********
 #define USE_OSD
